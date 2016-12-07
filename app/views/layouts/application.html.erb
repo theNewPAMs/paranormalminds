@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paranormalminds</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="<%= controller_name %>">
+    <div id="banner">
+      <%= image_tag("logo2.png") %>
+      <li><a>Home</a></li>
+      <li><a>About</a></li>
+      <li><a>Programs</a></li>
+      <li><a>Mentors</a></li>
+      <li><a>FAQ</a></li>
+      <li><a>Contact</a></li>
+    </div>
+    <%= yield %>
+  </body>
+</html>
