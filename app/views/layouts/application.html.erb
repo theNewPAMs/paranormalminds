@@ -8,6 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body class="<%= controller_name %>">
     <div id="banner">
       <%= image_tag("logo2.png") %>
@@ -16,7 +17,12 @@
       <li><a>Programs</a></li>
       <li><a>Mentors</a></li>
       <li><a>FAQ</a></li>
-      <li><a>Contact</a></li>
+      <li><a>SIGN IN</a></li>
+    </div>
+    <div class="page-heading">
+      <div class="page-heading-text">
+      <h1></h1>
+      </div>
     </div>
     <%= yield %>
   </body>
