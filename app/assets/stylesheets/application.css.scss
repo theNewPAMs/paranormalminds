@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,300,700);
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -11,91 +12,383 @@
  *= require_self
  *= require_tree .
  */
-#banner {
-  background: #9f9f9f;
-  padding: 10px;
-  border-bottom: 4px solid;
-  font: small-caps 21px/21px "Times New Roman", serif;
-  color: #2EBBB0;
-  text-align: center;
-  height: 2em;
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight:300;
+  color: #555;
+  margin: 0;
+  padding: 0;
+}
+#page{
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+/* Text */
+h1{
+  margin: 0 0 1em 0;
+  font-size: 2.8em;
+  font-weight: 700;
+}
+h2{
+  margin: 0 0 0.5em 0;
+  font-size: 1.6em;
+  font-weight: 700;
+  line-height: 1.1em;
+}
+h3{
+  margin: 0 0 0.5em 0;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+h4{
+  margin: 0 0 1.5em 0;
+  font-size: 1em;
+  font-weight: 700;
+}
+p {
+  margin: 0 0 1em 0;
+}
+a {
+  color: #007eff
+}
+a:visited {
+  color: #35b12f;
+}
+/* Buttons */
+a.btn{
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 4px 15px;
+  transition: background-color 0.5s;
+}
+a.btn:hover {
+  background-color: rgba(0,0,0,.3);
+}
 
-  li{
-    list-style: none;
+/* Header */
+header{
+  height: 430px;
+  background: #007eff image_url('Header/header-home.png') no-repeat center bottom;
+  position: relative;
+}
+header a.logo {
+  z-index: 1;
+  position: absolute;
+  display: block;
+  width: 218px;
+  height: 66px;
+  background: image_url('logo.png') no-repeat 0 0;
+  background-size: contain;
+  top: 5px;
+  left: 20px;
+}
 
-    a{
-      float: left;
-      padding:  10px 40px 10px 40px;
-    }
+header a.logo span {
+  display: none;
+}
+header div.hero {
+  position: absolute;
+  width: 42%;
+  top: 200px;
+  left: 5%;
+}
+header div.hero h1 {
+  line-height: 1em;
+  margin: 0 0 30px 0;
+  color:#fff;
+}
+/* Footer */
+footer{
+  font-size: 0.8em;
+  margin:40px;
+  color: #999;
+}
+
+footer .content {
+  display: inline;
+}
+
+footer a{
+  margin-left: 30px;
+  color: #777;
+}
+
+footer a:visited{
+  color: #777;
+}
+
+footer a:hover{
+  color: #000;
+}
+
+/* Navigation */
+nav {
+  background-color: rgba(0,50,90,0.65);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 25px 0 0 0;
+  width: auto;
+}
+nav::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li a {
+  display: inline-block;
+  color: #258aff;
+  padding: 10px 20px;
+  width: 125px;
+  text-decoration: none;
+  position: relative;
+}
+nav ul li .sign{
+  border: 1px solid;
+
+}
+nav ul li a:visited {
+  color: #fff;
+}
+nav ul li a:hover{
+  background-color: rgba(8, 104, 150,0.65);
+}
+nav ul li:hover{
+  background-color: rgba(8, 104, 150,0.65);
+}
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul ul {
+  position: absolute;
+  top:100%;
+  background-color: rgba(29, 50, 90, 0.65);
+  display: none;
+}
+nav ul ul li{
+  position: relative;
+}
+nav ul ul ul {
+  left: 100%;
+  top: 0px;
+}
+
+/* Top Level*/
+nav > ul {
+  padding-left: 250px;
+}
+nav > ul > li {
+  float: left;
+}
+nav > ul > li > a {
+  width: auto;
+  padding: 10px 20px 15px 20px;
+}
+
+nav a[aria-haspopup="true"]::after{
+  content: '';
+  display: block;
+  width: 0px;
+  height: 0px;
+  top:16px;
+  left: 15px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1190px){
+  h1{
+    font-size: 2.2em;
   }
 
+  /*Header 1190px */
+  header div.hero{
+    left: 5%;
+  }
+  header div.hero h1{
+    margin-bottom: 20px;
+  }
 
-  img {
-    float: left;
-      width: 150px;
+  /* Section Atmosphere */
+  section.atmosphere article {
+    padding-left: 400px;
+    background-size: 375px auto;
   }
 }
 
-.page-heading{
-  background-image: image_url('Header/Header.jpeg');
-  background-size: cover;
-  min-height: 190px;
-  color: #2EBBB0;
-  padding: 25px 15px;
-  margin-bottom: 50px;
-  border-bottom: 4px solid;
-
-  .page-heading-text{
-    font: small-caps 21px/21px "Times New Roman", serif;
-    text-decoration-color: white;
-    background-color: #bbffbb;
-    -webkit-box-sizing: border-box;
-    float: left;
+@media screen and (max-width: 870px){
+  h1{
+    font-size: 1.8em;
   }
 
-}
-
-
-#notice {
- color: #000 !important;
- border: 2px solid red;
- padding: 1em;
- margin-bottom: 2em;
- background-color: #f0f0f0;
- font: bold smaller sans-serif;
-}
-
-#columns {
- background: #141;
-
- #main {
-   margin-left: 17em;
-   padding: 1em;
-   background: white;
- }
-
- #side {
-   float: left;
-   padding: 1em 2em;
-   width: 13em;
-   background: #141;
-
-   .time {
-     color: #bfb;
-     padding:0;
+  /* Header */
+  header div.hero{
+    left: 5%;
+    top: 115px;
+  }
+  header div.hero h1{
+    margin-bottom: 20px;
+  }
+  header{
+    height: 300px;
+    background-image: image_url('Header/header-home-900.png');
+  }
+  section.atmosphere article{
+    padding-left: 352px;
+    background-size: 300px auto;
+  }
+   section.how-to blockquote p.quote {
+     font-size: 1.1em;
+     line-height: 1.2em;
    }
+  section.how-to blockquote p.credit{
+    font-size: 0.85em;
+  }
+}
+@media screen and (max-width: 719px){
+  h1{
+    font-size: 1.4em;
+  }
+  h2{
+    font-size: 1.2em;
+  }
+  h2{
+    font-size: 1.0em;
+  }
+  a.btn{
+    font-size: 1em;
+  }
 
-   ul {
-     padding: 0;
-     li {
-       list-style: none;
-       a {
-         color: #bfb;
-         font-size: small;
-       }
-     }
-   }
+  /* Header */
+  header a.logo{
+    width: 145em;
+    height: 60px;
+  }
+  header div.hero{
+    top: 170px;
+    left: 4%;
+  }
 
+  /* Section - Main*/
+  section.main{
+    margin-top: 10em;
+    margin-bottom: 10px;
+  }
+  section.main aside div.content {
+    background-size: 55px 55px;
+    padding-bottom: 60px;
+  }
 
- }
+  /* Section How-to */
+  section.how-to aside div.content img{
+    width: 85%;
+  }
+
+  /* Navigation */
+  nav {
+    padding-top: 80px;
+  }
+  nav > ul{
+    padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 565px){
+  h1{
+    font-size: 1em;
+  }
+  h3{
+    margin-bottom: 0px;
+  }
+  a.btn{
+    font-size: 0.7em;
+  }
+
+  /* Header */
+  header{
+    height: 160px;
+    background-image: image_url('Header/header-home-640');
+    background-position: left top;
+  }
+  header a.logo{
+    width: 100%;
+    height: 66px;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(29, 50, 90, 0.65);
+    background-size: 150px 50px;
+    background-position: 20px center;
+  }
+  header div.hero{
+    top: 75px;
+    left: 3%;
+  }
+
+  header div.hero h1{
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  nav {
+    position: static;
+    width: auto;
+    padding: 20px 15px;
+    background-color: #3a659b;
+  }
+
+  nav ul,
+  nav ul ul,
+  nav ul ul ul {
+    display: block;
+    position: static;
+  }
+  nav > ul {
+    padding: 0;
+  }
+  nav > ul > li {
+    float: none;
+    margin-top: 25px;
+  }
+  nav ul li:hover{
+    background: none;
+  }
+  nav ul li a {
+    width: auto;
+    display: block;
+    margin: 8px 10px;
+    padding: 8px 15px;
+    border: 1px solid rgba(255,255,255, 0.2);
+  }
+
+  nav ul ul {
+    background: none;
+  }
+  nav ul ul li a{
+    margin-left: 30px;
+  }
+  nav ul ul ul li a {
+    margin-left: 60px;
+  }
+  nav a[aria-haspopup="true"]::after{
+    display: none;
+  }
+
+  /* Footer */
+  footer div.content {
+    display: block;
+    margin-top: 15px;
+  }
+
+  footer div.content a{
+    margin: 0 20px 0 0;
+  }
 }

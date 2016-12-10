@@ -10,20 +10,60 @@
 
 
   <body class="<%= controller_name %>">
-    <div id="banner">
-      <%= image_tag("logo2.png") %>
-      <li><a>Home</a></li>
-      <li><a>About</a></li>
-      <li><a>Programs</a></li>
-      <li><a>Mentors</a></li>
-      <li><a>FAQ</a></li>
-      <li><a href="<%= users_path %>">SIGN IN</a></li>
-    </div>
-    <div class="page-heading">
-      <div class="page-heading-text">
-      <h1></h1>
-      </div>
-    </div>
+
+
     <%= yield %>
+
+
+    <nav>
+      <ul>
+        <li>
+          <a title="Home" href="#">Home</a>
+        </li>
+        <li>
+          <a title="About" href="#">About</a>
+          <ul>
+            <li>
+              <a title="Our Impact" href="#" aria-haspopup="true">Our impact</a>
+            </li>
+            <li>
+              <a title="Our Team" href="#" aria-haspopup="true">Our Team</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a title="Programs" href="#" aria-haspopup="true">Programs</a>
+          <ul>
+            <li>
+              <a title="Tutoring" href="#">Tutoring</a>
+            </li>
+            <li>
+              <a title="Mentoring" href="#">Mentoring</a>
+            </li>
+            <li>
+              <a title="project" href="#">Computer Laboratory</a>
+            </li>
+            <li>
+              <a title="Career Guidance" href="#">Career Guidance</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a title="FAQ" href="#">FAQ</a>
+        </li>
+        <li>
+          <a class="sign" title="Signin" href="#">SIGN IN</a>
+        </li>
+      </ul>
+    </nav>
+
+    <footer>
+      &copy; Paranormalminds
+      <div class="content">
+        <a title="Privacy Policy" href="#">Privacy Policy</a>
+        <a title="Terms of Service" href="#">Terms of Service</a>
+      </div>
+    </footer>
   </body>
+
 </html>
